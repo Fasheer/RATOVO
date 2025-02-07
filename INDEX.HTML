@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RATOVO L </title>
+    <style>
+        /* Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        /* Header */
+        .header {
+            background-color:rgb(203, 216, 230);
+            padding: 1rem;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(133, 8, 8, 0.1);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        /* Checkout Form */
+        .checkout-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Blog Section */
+        .blog-section {
+            padding: 2rem;
+            background: white;
+            margin: 2rem;
+            border-radius: 10px;
+        }
+
+        .comment-form {
+            margin-top: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Homepage -->
+    <header class="header">
+        <h1>Ratovo'Store</h1>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#blog">Blog</a>
+            <a href="#cart">Cart (0)</a>
+        </nav>
+    </header>
+
+    <!-- Product Listing -->
+    <section id="products" class="product-grid">
+        <div class="product-card">
+            <img src="images/images.jpg" class="product-img">
+            <h3>T shirt</h3>
+            <p>$99.99</p>
+            <button>Add to Basket</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/images (1).jpg" class="product-img">
+            <h3>Perfume</h3>
+            <p>$39.99</p>
+            <button>Add to Basket</button>
+        </div>
+    </section>
+
+    <!-- Checkout Page -->
+    <section id="checkout" class="checkout-form">
+        <h2>Secure Checkout</h2>
+        <form>
+            <div class="form-group">
+                <label>Full Name:</label>
+                <input type="text" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Payment Method:</label>
+                <select>
+                    <option>Credit Card</option>
+                    <option>PayPal</option>
+                    <option>Apple Pay</option>
+                </select>
+            </div>
+
+            <button type="submit" style="background-color: #27ae60; color: white; padding: 1rem; width: 100%;">
+                Pay Securely (€239.98)
+            </button>
+        </form>
+    </section>
+
+    <!-- Blog Interface -->
+    <section class="blog-section">
+        <h2>Customer Stories</h2>
+        <article>
+            <h3>My Perfect Weekend Outfit</h3>
+            <p>Posted by FK. • 2 days ago</p>
+            <p>5 star rating...</p>
+        </article>
+
+        <div class="comment-form">
+            <h4>Leave a Comment</h4>
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Your comment..." rows="4" required></textarea>
+                <button type="submit">Post Comment</button>
+            </form>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 2rem; background-color: #2c3e50; color: white;">
+        <p>Secure SSL| Privacy Policy</p>
+    </footer>
+</body>
+</html>
